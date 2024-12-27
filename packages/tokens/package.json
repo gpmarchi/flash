@@ -1,0 +1,18 @@
+{
+  "name": "@repo/tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./colors": "./src/colors.ts",
+    "./fonts": "./src/fonts.ts",
+    "./radii": "./src/radii.ts",
+    "./spacing": "./src/spacing.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
