@@ -12,7 +12,8 @@
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@repo/ui": "workspace:*"
+    "@repo/ui": "workspace:*",
+    "@repo/tokens": "workspace:*"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
