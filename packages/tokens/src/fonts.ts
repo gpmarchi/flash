@@ -8,8 +8,8 @@ export const fonts = {
   },
   
   fontWeights: {
-    'regular': 400,
-    'bold': 700,
+    regular: '400',
+    bold: '700',
   },
 
   fontFamilies: {

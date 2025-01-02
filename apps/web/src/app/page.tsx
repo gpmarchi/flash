@@ -1,9 +1,7 @@
-import { colors } from '@repo/tokens/colors'
-
 export default function Home() {
   return (
     <div>
-      <pre>{JSON.stringify(colors, null, 2)}</pre>
+      <h1 className="font-bold leading-heading">Hello World</h1>
     </div>
   )
 }
