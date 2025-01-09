@@ -1,4 +1,5 @@
 import { MoveRight } from 'lucide-react'
+import { ProgressCircle } from '../components/progress-circle'
 
 export default function Home() {
   return (
@@ -40,7 +41,12 @@ export default function Home() {
               <MoveRight className="w-5 h-5" />
             </a>
 
-            <div></div>
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6">
+                <ProgressCircle progress={50} />
+              </div>
+              <span className="text-geyser-400 text-sm leading-base">8/16</span>
+            </div>
           </div>
         </div>
       </main>
