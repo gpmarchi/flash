@@ -17,6 +17,7 @@ export default {
     fontWeight: fonts.fontWeights,
     fontFamily: {
       sans: fonts.fontFamilies.default,
+      mono: 'monospace',
     },
     fontSize: fonts.fontSizes,
     lineHeight: fonts.lineHeights,
