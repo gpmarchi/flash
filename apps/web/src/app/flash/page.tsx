@@ -1,5 +1,6 @@
 'use client'
 
+import { Progress, ProgressBar, ProgressIndicator } from '@repo/ui'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -17,19 +18,10 @@ export default function Flash() {
             Fundamentos do JavaScript
           </span>
 
-          <div className="flex items-center gap-3">
-            <div className="h-3 flex-1 bg-bunker-700 rounded-md">
-              <div
-                className="h-3 rounded-md bg-bunker-200 transition-all"
-                style={{
-                  width: `${Math.round((flashCardsCount * 100) / flashCardsTotal)}%`,
-                }}
-              />
-            </div>
-            <span className="text-sm font-mono font-bold">
-              {String(flashCardsCount).padStart(2, '0')}/{flashCardsTotal}
-            </span>
-          </div>
+          <Progress max={flashCardsTotal} current={flashCardsCount}>
+            <ProgressBar />
+            <ProgressIndicator />
+          </Progress>
         </div>
 
         <div className="relative mt-20 w-full max-w-[420px] min-h-[416px]">
@@ -71,7 +63,10 @@ export default function Flash() {
       </div>
 
       <button
-        onClick={() => setShouldShowAnswer(true)}
+        onClick={() => {
+          setShouldShowAnswer(true)
+          setFlashCardsCount((state) => state + 1)
+        }}
         className="bg-bunker-100 text-bunker-500 py-8 w-full font-bold uppercase hover:bg-bunker-50/90 md:w-[320px] md:mb-16 md:rounded-full md:py-6"
       >
         Revelar resposta
